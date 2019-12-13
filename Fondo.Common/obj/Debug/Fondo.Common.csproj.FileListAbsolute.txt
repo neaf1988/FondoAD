@@ -1,0 +1,6 @@
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\bin\Debug\Fondo.Common.dll
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\bin\Debug\Fondo.Common.pdb
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Debug\Fondo.Common.csprojAssemblyReference.cache
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Debug\Fondo.Common.csproj.CoreCompileInputs.cache
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Debug\Fondo.Common.dll
+C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Debug\Fondo.Common.pdb
