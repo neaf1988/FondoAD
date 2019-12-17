@@ -10100,11 +10100,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.Web\\Fondo.Web.csproj",
+      "projectUniqueName": "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.Web\\Fondo.Web.csproj",
       "projectName": "Fondo.Web",
-      "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.Web\\Fondo.Web.csproj",
+      "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.Web\\Fondo.Web.csproj",
       "packagesPath": "C:\\Users\\fabio.quintero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.Web\\obj\\",
+      "outputPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10123,11 +10123,11 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.DAL\\Fondo.DAL.csproj": {
-              "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.DAL\\Fondo.DAL.csproj"
+            "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.DAL\\Fondo.DAL.csproj": {
+              "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.DAL\\Fondo.DAL.csproj"
             },
-            "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.Domain\\Fondo.Domain.csproj": {
-              "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\Fondo\\Fondo.Domain\\Fondo.Domain.csproj"
+            "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.Domain\\Fondo.Domain.csproj": {
+              "projectPath": "C:\\Users\\fabio.quintero\\Source\\Repos\\FondoAD\\Fondo.Domain\\Fondo.Domain.csproj"
             }
           }
         }
