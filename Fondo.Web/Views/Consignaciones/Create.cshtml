@@ -1,0 +1,235 @@
+﻿@model Fondo.Web.Model.ConsignacionMVC
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Consignación-Nuevo";
+
+}
+
+
+<hr />
+@{ if (Model.TipoConsignacion == 1)
+    {
+        <h1>Prestamo</h1>
+
+
+    }
+    else
+    {
+        <h1>Ahorro</h1>
+    }
+}
+
+<hr />
+<form asp-action="Create">
+    <div class="form-row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group col-md-3">
+            <label asp-for="PersonaId" class="control-label"></label>
+            <select asp-for="PersonaId" class="form-control" asp-items="ViewBag.personas"></select>
+            <span asp-validation-for="PersonaId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label asp-for="Valor" class="control-label"></label>
+            <input asp-for="Valor" class="form-control" />
+            <span asp-validation-for="Valor" class="text-danger"></span>
+        </div>
+        @if (Model.TipoConsignacion == 1)
+        {
+        <div class="form-group col-md-2">
+            <label asp-for="Interes" class="control-label"></label>
+            <div>
+                <div class="input-group mb-3">
+                    <input asp-for="Interes" class="form-control" aria-describedby="taxCalc" />
+
+                    <div class="input-group-append">
+                        <span class="input-group-text" style="cursor:pointer" id="taxCalc"><span class="fas fa-fw fa-calculator" ></span></span>
+                    </div>
+                </div>
+            </div>
+            <span asp-validation-for="Interes" class="text-danger"></span>
+        </div>
+        }
+        <div class="form-group col-md-3">
+            <label asp-for="Fecha" class="control-label"></label>
+            <div>
+                <div class="input-group mb-3">
+                    <input asp-for="Fecha" value="@Model.Fecha.ToString("yyyy-MM-dd")" class="form-control" aria-describedby="basic-addon2" />
+
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-fw fa-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <span asp-validation-for="Interes" class="text-danger"></span>
+        </div>
+    </div>
+
+    @{ if (Model.TipoConsignacion == 1)
+        {
+            
+    <div id="infoPrestamo" style="display:none">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fas fa-table"></i>
+                Detalles Prestamo)
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Fecha Prestamo</th>
+                                <th>Valor Prestado</th>
+                                <th>Abonado</th>
+                                <th>Intereses</th>
+                                <th>Saldo</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>  <span id="fechaPrestamo"></span></td>
+                                <td>  <span id="valorPrestamo"></span></td>
+                                <td><span id="valorAbonado"></span></td>
+                                <td><span id="valorIntereses"></span></td>
+                                <td><span id="valorSaldo"></span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                   
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
+
+
+                }
+
+                }
+                <input type="hidden" asp-for="TipoConsignacion" value="@Model.TipoConsignacion" />
+                <input type="hidden" asp-for="FechaRegistro" value="@Model.FechaRegistro" />
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $('#Fecha').datepicker({
+            format: "yyyy-mm-dd",
+            todayBtn: "linked",
+            clearBtn: true,
+            language: "es",
+            todayHighlight: true
+        });
+        var personaID = $("#PersonaId").val();
+        var tipoConsignacion = $("#TipoConsignacion").val();
+        getMontoAhorro(personaID, tipoConsignacion);
+
+        $("#PersonaId").change(function () {
+            $("#Interes").val("");
+            var personaID = $("#PersonaId").val();
+            let tipoConsignacion = $("#TipoConsignacion").val();
+            if (Number(tipoConsignacion) == 1) {
+                $("#infoPrestamo").hide();
+                getInfoPrestamo(personaID);
+            } else {
+                getMontoAhorro(personaID, tipoConsignacion);
+            }
+
+        });
+
+        $("#taxCalc").click(function () {
+            var personaID = $("#PersonaId").val();
+            if (Number(tipoConsignacion) == 1 && personaID != "") {
+                
+                getCalculoInteres(personaID);
+            }
+        });
+
+        function getCalculoInteres(personaID) {
+            if (personaID != "") {
+                $.ajax({
+                    type: "GET",
+                    url: "@Url.Action("calculoInteres")/" + personaID,
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+
+                        $("#Interes").val(response);
+                        },
+                    failure: function (response) {
+                            alert(response);
+                        }
+                    });
+            } else {
+                $("#Valor").val("");
+            }
+
+        }
+
+        function getInfoPrestamo(personaID) {
+            const formatter = new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                minimumFractionDigits: 0
+            })
+            $.ajax({
+                    type: "GET",
+                    url: "@Url.Action("infoPrestamo")/" + personaID,
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        console.log(response);
+                        $("#infoPrestamo").show();
+                        $("#valorPrestamo").text(formatter.format(response.prestamo));
+                        $("#fechaPrestamo").text(response.fecha);
+                        $("#valorAbonado").text(formatter.format(response.abonado));
+                        $("#valorIntereses").text(formatter.format(response.intereses));
+                        $("#valorSaldo").text(formatter.format(response.saldo));
+                        },
+                failure: function (response) {
+                    $("#infoPrestamo").hide();
+                        alert(response);
+
+                        }
+                    });
+        }
+
+        function getMontoAhorro(personaID, tipoConsignacion) {
+            if (personaID != "" && tipoConsignacion == 2) {
+                $.ajax({
+                    type: "GET",
+                    url: "@Url.Action("montoAhorro")/" + personaID,
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+
+                        $("#Valor").val(response);
+                        },
+                    failure: function (response) {
+                            alert(response);
+                        }
+                    });
+            } else {
+                $("#Valor").val("");
+            }
+
+        }
+
+    </script>
+}

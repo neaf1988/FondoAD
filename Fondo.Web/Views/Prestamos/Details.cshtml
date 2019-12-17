@@ -1,0 +1,42 @@
+﻿@model Fondo.Web.Model.PrestamoMVC
+
+@{
+    ViewData["Title"] = "Prestamos-Detalles";
+    Layout = "_Layout";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Detalles @Html.DisplayFor(model => model.Persona.Nombres)&nbsp;@Html.DisplayFor(model => model.Persona.Apellidos)
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>  @Html.DisplayNameFor(model => model.Valor)</th>
+                        <th>  @Html.DisplayNameFor(model => model.Interes)</th>
+                        <th> @Html.DisplayNameFor(model => model.Fecha)</th>
+                        <th> @Html.DisplayNameFor(model => model.FechaRegistro)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>  @Html.DisplayFor(model => model.Valor)</td>
+                        <td>@Html.DisplayFor(model => model.Interes)</td>
+                        <td>@Model.Fecha.ToString("yyyy-MM-dd")</td>
+                        <td>@Model.FechaRegistro.ToString("yyyy-MM-dd")</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">
+        <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+        <a class="btn btn-link btn-sm" asp-action="Index">Regresar</a>
+    </div>
+</div>
+

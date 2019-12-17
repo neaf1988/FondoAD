@@ -1,0 +1,50 @@
+﻿@model Fondo.Web.Model.PersonaMVC
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Personas-Eliminar";
+}
+
+<h3 class="text-danger">Va eliminar esta persona, desea continuar?</h3>
+<div>
+  
+
+    <hr />
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>  @Html.DisplayNameFor(model => model.Cedula)</th>
+                        <th>  @Html.DisplayNameFor(model => model.Nombres)</th>
+                        <th> @Html.DisplayNameFor(model => model.Apellidos)</th>
+                        <th> @Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th> @Html.DisplayNameFor(model => model.Direccion)</th>
+                        <th> @Html.DisplayNameFor(model => model.CorreoElectronico)</th>
+                        <th> @Html.DisplayNameFor(model => model.FechaNacimiento)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>  @Html.DisplayFor(model => model.Cedula)</td>
+                        <td>@Html.DisplayFor(model => model.Nombres)</td>
+                        <td>@Html.DisplayFor(model => model.Apellidos)</td>
+                        <td>@Html.DisplayFor(model => model.Telefono)</td>
+                        <td>@Html.DisplayFor(model => model.Direccion)</td>
+                        <td>@Html.DisplayFor(model => model.CorreoElectronico)</td>
+                        <td>@Html.DisplayFor(model => model.FechaNacimiento)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Regresar</a>
+    </form>
+</div>

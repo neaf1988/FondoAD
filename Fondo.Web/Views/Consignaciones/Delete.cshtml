@@ -1,0 +1,72 @@
+﻿@model Fondo.Web.Model.ConsignacionMVC
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Consignación-Eliminar";
+}
+
+<h3 class="text-danger">Va eliminar esta consignación, desea continuar?</h3>
+<div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TipoConsignacion)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Valor)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fecha)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FechaRegistro)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Persona)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            @if(Model.TipoConsignacion == 1)
+                            {
+                                <div>Consignación</div>
+                            }
+                            else
+                            {
+                                <div>Ahorro</div>
+                            }
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(model => model.Valor)
+                        </td>
+
+                        <td>
+                            @Model.Fecha.ToShortDateString()
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(model => model.FechaRegistro)
+                        </td>
+
+                        <td>
+                            @String.Format("{0} {1}",Model.Persona.Nombres,Model.Persona.Apellidos)
+                            
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                <a asp-action="Index">Regresar</a>
+            </form>
+        </div>

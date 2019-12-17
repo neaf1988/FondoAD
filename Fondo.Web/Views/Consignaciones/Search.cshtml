@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Fondo.Web.Model.ConsignacionMVC>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Consignaciones";
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Persona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoConsignacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @String.Format("{0} {1}", item.Persona.Nombres, item.Persona.Apellidos)
+                </td>
+                <td>
+                    @if (item.TipoConsignacion == 1)
+                    {
+                        <div>Prestamo</div>
+                    }
+                    else
+                    {
+                        <div>Ahorro</div>
+                    }
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Interes)
+                </td>
+                <td>
+                    @item.Fecha.ToString("yyyy-MM-dd")
+                </td>
+                <td>
+                    @item.FechaRegistro.ToString("yyyy-MM-dd")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

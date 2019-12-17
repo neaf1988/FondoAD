@@ -1,0 +1,122 @@
+﻿@model Fondo.Web.Model.PersonaMVC
+
+@{
+    ViewData["Title"] = "Personas-Detalle";
+    Layout = "_Layout";
+    string textoQuincena = "";
+    if (Model.Quincena == 1)
+    {
+        textoQuincena = "1ra Quincena";
+    }
+    else
+    {
+        textoQuincena = "2da Quincena";
+    }
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Detalles @Html.DisplayFor(model => model.Nombres)&nbsp;@Html.DisplayFor(model => model.Apellidos)
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>  @Html.DisplayNameFor(model => model.Cedula)</th>
+                        <th>  @Html.DisplayNameFor(model => model.Nombres)</th>
+                        <th> @Html.DisplayNameFor(model => model.Apellidos)</th>
+                        <th> @Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th> @Html.DisplayNameFor(model => model.Direccion)</th>
+                        <th> @Html.DisplayNameFor(model => model.CorreoElectronico)</th>
+                        <th> @Html.DisplayNameFor(model => model.FechaNacimiento)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>  @Html.DisplayFor(model => model.Cedula)</td>
+                        <td>@Html.DisplayFor(model => model.Nombres)</td>
+                        <td>@Html.DisplayFor(model => model.Apellidos)</td>
+                        <td>@Html.DisplayFor(model => model.Telefono)</td>
+                        <td>@Html.DisplayFor(model => model.Direccion)</td>
+                        <td>@Html.DisplayFor(model => model.CorreoElectronico)</td>
+                        <td>@Model.FechaNacimiento.ToString("yyyy-MM-dd")</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>  @Html.DisplayNameFor(model => model.Banco)</th>
+                        <th>  @Html.DisplayNameFor(model => model.NumeroCuenta)</th>
+                        <th> @Html.DisplayNameFor(model => model.MontoAhorro)</th>
+                        <th> @Html.DisplayNameFor(model => model.Quincena)</th>
+                        <th> @Html.DisplayNameFor(model => model.Activo)</th>
+                        <th> @Html.DisplayNameFor(model => model.Afiliado)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>  @Html.DisplayFor(model => model.Banco)</td>
+                        <td>@Html.DisplayFor(model => model.NumeroCuenta)</td>
+                        <td>@ViewData["montoAhorro"]</td>
+                        <td>@textoQuincena</td>
+                        <td>@Html.DisplayFor(model => model.Activo)</td>
+                        <td>@Html.DisplayFor(model => model.Afiliado)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Total Ahorrado </th>
+                        <th>Total Prestado</th>
+                        @if (ViewBag.prestamo > 0)
+                        {
+                            <th>Abonado</th>
+                            <th>Saldo</th>
+                        }
+                        </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        @if (Model.Afiliado && ViewBag.totalAhorrado == 0)
+                        {
+                            <td>No hay dinero ahorrado</td>
+                        }
+                        else if (Model.Afiliado && ViewBag.totalAhorrado > 0)
+                        {
+                            <td>@string.Format("{0:c}", ViewBag.totalAhorrado)</td>
+                        }
+                        else
+                        {
+                            <td>No es afiliado</td>
+                        }
+                        @if (ViewBag.prestamo > 0)
+                        {
+                            <td>@string.Format("{0:c}", ViewBag.prestamo)</td>
+                            <td>@string.Format("{0:c}", ViewBag.abonado)</td>
+                            <td>@string.Format("{0:c}", ViewBag.saldo)</td>
+                        }
+                        else
+                        {
+                            <td>No hay prestamo vigente</td>
+                        }
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">
+        <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+        <a class="btn btn-link btn-sm" asp-action="Index">Regresar</a>
+    </div>
+</div>
+

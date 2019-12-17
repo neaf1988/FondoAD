@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Fondo.Web.Model.ParametrosMVC>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Parametros";
+}
+
+
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor2)
+                </td>
+                <td>
+                    
+                    <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
+                    @*<a class="btn btn-outline-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalles</a>*@ 
+                    <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

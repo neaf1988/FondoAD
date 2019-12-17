@@ -1,0 +1,47 @@
+﻿@model Fondo.Web.Model.PrestamoMVC
+@{
+    ViewData["Title"] = "Prestamos-Eliminar";
+    Layout = "_Layout";
+}
+
+<h3 class="text-danger">Va eliminar este prestamo, desea continuar?</h3>
+<div>
+
+
+    <hr />
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>  @Html.DisplayNameFor(model => model.Persona)</th>
+                        <th>  @Html.DisplayNameFor(model => model.Valor)</th>
+                        <th> @Html.DisplayNameFor(model => model.Interes)</th>
+                        <th> @Html.DisplayNameFor(model => model.Fecha)</th>
+                        <th> @Html.DisplayNameFor(model => model.FechaRegistro)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        
+                        <td>@Html.DisplayFor(model => model.Persona.Nombres) @Html.DisplayFor(model => model.Persona.Apellidos)</td>
+                        
+                        <td>@Html.DisplayFor(model => model.Valor)</td>
+                        <td>@Html.DisplayFor(model => model.Interes)</td>
+                        <td>@Html.DisplayFor(model => model.Fecha)</td>
+                        <td>@Html.DisplayFor(model => model.FechaRegistro)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Regresar</a>
+    </form>
+</div>
