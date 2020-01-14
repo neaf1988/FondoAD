@@ -250,7 +250,7 @@ using Fondo.Web;
             WriteLiteral("\r\n            </td>\r\n\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(2157, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a02d83a22f42441399beae6ca82d8ce9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "faabf897f9f4481d97e6f2acbbf56222", async() => {
                 BeginContext(2241, 8, true);
                 WriteLiteral("Detalles");
                 EndContext();

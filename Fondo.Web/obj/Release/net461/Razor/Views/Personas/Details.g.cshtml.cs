@@ -497,7 +497,7 @@ using Fondo.Web;
             WriteLiteral("                    </tr>\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n        ");
             EndContext();
             BeginContext(5014, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aeb6032e79364aa7aea604a86531dbe4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b0e7893dc83341d8a718b6fbe5940550", async() => {
                 BeginContext(5099, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -533,7 +533,7 @@ using Fondo.Web;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(5119, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c2a4c71a7254db7b5a2678121ada421", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab55bb124d89402db56c9aeb735602e7", async() => {
                 BeginContext(5169, 8, true);
                 WriteLiteral("Regresar");
                 EndContext();

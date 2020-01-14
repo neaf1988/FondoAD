@@ -67,7 +67,7 @@ using Fondo.Web;
             WriteLiteral("\r\n<p>\r\n    ");
             EndContext();
             BeginContext(132, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "891b91566fa0426f96ad472a9af57df6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ffd68146e3654154b32c4a92c5f685e9", async() => {
                 BeginContext(215, 5, true);
                 WriteLiteral("Nuevo");
                 EndContext();
@@ -231,7 +231,7 @@ using Fondo.Web;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1701, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7132fd53745b4eda90f6979f8cb5eba5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6212625166e94b19a9f05f78eb574177", async() => {
                 BeginContext(1785, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -267,7 +267,7 @@ using Fondo.Web;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(1813, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90a16b52f71b47f6b057ce429539413d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0824ff57557b47acadcdd7e3fdf1710e", async() => {
                 BeginContext(1897, 8, true);
                 WriteLiteral("Detalles");
                 EndContext();
@@ -303,7 +303,7 @@ using Fondo.Web;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(1927, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25352d3464fe4d12bdd0f40a00372b1a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e448b7f58b5f4cb4b3b6748c85f12973", async() => {
                 BeginContext(2012, 8, true);
                 WriteLiteral("Eliminar");
                 EndContext();

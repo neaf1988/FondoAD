@@ -739,11 +739,11 @@ C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.DAL.dll
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.Domain.dll
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.DTO.dll
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.Common.pdb
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.DAL.pdb
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.DAL.dll.config
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.Domain.pdb
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.Domain.dll.config
-C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.Common.pdb
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\Fondo.DTO.pdb
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.Web.csprojAssemblyReference.cache
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.Web.exe.config
@@ -800,3 +800,4 @@ C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.Web.csproj.CopyComplete
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.Web.exe
 C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\obj\Release\net461\Fondo.Web.pdb
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Web\bin\Release\net461\log4net.dll

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/win7-x86",
-    "signature": "59a1463d9d7747b9ebc46f2a1bdcd06c2d81265f"
+    "signature": "8c1e99fbd9c76765a74e2e391c6896426a10e154"
   },
   "compilationOptions": {
     "defines": [
@@ -38,6 +38,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.0",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "log4net": "2.0.8",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -787,6 +788,11 @@
         },
         "compile": {
           "lib/net461/AutoMapper.dll": {}
+        }
+      },
+      "log4net/2.0.8": {
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.1.6": {
@@ -2181,6 +2187,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.0",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "log4net": "2.0.8",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -2315,6 +2322,11 @@
         },
         "runtime": {
           "lib/net461/AutoMapper.dll": {}
+        }
+      },
+      "log4net/2.0.8": {
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.1.6": {
@@ -3709,6 +3721,13 @@
       "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
       "path": "automapper/8.0.0",
       "hashPath": "automapper.8.0.0.nupkg.sha512"
+    },
+    "log4net/2.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dwvu/YELc2nF5gjAnJMXJToYXVdK8Ma0BfLTEugMTM6l8kFysL9Np5LnwhUV6EKTkbRmVTa0/X1/8oSICcoHHw==",
+      "path": "log4net/2.0.8",
+      "hashPath": "log4net.2.0.8.nupkg.sha512"
     },
     "Microsoft.AspNetCore/2.1.6": {
       "type": "package",

@@ -4,3 +4,12 @@ C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Release\Fondo.Common
 C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Release\Fondo.Common.csproj.CoreCompileInputs.cache
 C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Release\Fondo.Common.dll
 C:\Users\fabio.quintero\Source\Repos\Fondo\Fondo.Common\obj\Release\Fondo.Common.pdb
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\bin\Release\Fondo.Common.dll
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\bin\Release\Fondo.Common.pdb
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\bin\Release\log4net.dll
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\bin\Release\log4net.xml
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\obj\Release\Fondo.Common.csprojAssemblyReference.cache
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\obj\Release\Fondo.Common.csproj.CoreCompileInputs.cache
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\obj\Release\Fondo.Common.csproj.CopyComplete
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\obj\Release\Fondo.Common.dll
+C:\Users\fabio.quintero\Source\Repos\FondoAD\Fondo.Common\obj\Release\Fondo.Common.pdb

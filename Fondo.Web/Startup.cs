@@ -1,10 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml;
 using Fondo.Common;
 using Fondo.DAL;
 using Fondo.Domain;
+using log4net;
+using log4net.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,7 +31,7 @@ namespace Fondo.Web
 
         public IConfiguration Configuration { get; }
         public IHostingEnvironment HostingEnvironment { get; }
-
+        public ILog Log { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -81,6 +86,25 @@ namespace Fondo.Web
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
             
+        }
+
+        /// <summary>
+        /// Allows to initialize log4net
+        /// </summary>
+        private void InitializeLog4Net()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var log4NetConfig = new XmlDocument();
+            
+            using (Stream stream = assembly.GetManifestResourceStream("Fondo.Web.log4net.config"))
+            {
+                log4NetConfig.Load(stream);
+            }
+            
+            ILoggerRepository repo = log4net.LogManager.CreateRepository(
+                Assembly.GetEntryAssembly(), typeof(log4net.Repository.Hierarchy.Hierarchy));
+           
+            log4net.Config.XmlConfigurator.Configure(repo, log4NetConfig["log4net"]);
         }
     }
 }

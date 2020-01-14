@@ -190,12 +190,12 @@ using Fondo.Web;
             WriteLiteral("\r\n                            \r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n\r\n            </table>\r\n\r\n            ");
             EndContext();
             BeginContext(2314, 236, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c88ef57531ee41e092ab047a699aaae6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3dfffe116d23488c99010ac70002a19c", async() => {
                 BeginContext(2340, 18, true);
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(2358, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f1ba1c80fc5b478794cb948d44f7e701", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a2e89494975e49a9b258ef54c644136a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -220,7 +220,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n                <input type=\"submit\" value=\"Eliminar\" class=\"btn btn-danger\" /> |\r\n                ");
                 EndContext();
                 BeginContext(2495, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a2ac3d6ad1c4c2d9c6e8c8d913d43b3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f39f177e2c4349658ddcf8e266d9f327", async() => {
                     BeginContext(2517, 8, true);
                     WriteLiteral("Regresar");
                     EndContext();

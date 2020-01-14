@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.WindowsServices;
 using System;
+using System.Diagnostics;
 
 namespace Fondo.Web
 {
@@ -48,7 +49,7 @@ namespace Fondo.Web
 
         protected override void OnStarting(string[] args)
         {
-            //Debugger.Launch();
+            Debugger.Launch();
             System.IO.Directory.SetCurrentDirectory(System.AppDomain.CurrentDomain.BaseDirectory);
            
             base.OnStarting(args);
